@@ -1,0 +1,25 @@
+{
+  "name": "weather-forecast",
+  "version": "1.0.0",
+  "description": "simple weather forecasting application using node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nntdesilva/weather-forecast.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nntdesilva/weather-forecast/issues"
+  },
+  "homepage": "https://github.com/nntdesilva/weather-forecast#readme",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mapbox-geocoding": "^0.1.5",
+    "request": "^2.88.2"
+  }
+}
