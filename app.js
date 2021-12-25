@@ -4,7 +4,8 @@ const request = require('request');
 const geo = require('mapbox-geocoding');
 require('dotenv').config();
 
-geo.setAccessToken(process.env.WEATHERSTACK_API_KEY);
+geo.setAccessToken(process.env.MAPBOX_API_KEY);
+const weatherStackKey = process.env.WEATHERSTACK_API_KEY;
 
 // Geocode an address to coordinates
 const fetchData = (url) => {
@@ -23,7 +24,7 @@ const getWeatherData = () => {
 		} else {
 			try {
 				const [ longitude, latitude ] = geoData.features[0].geometry.coordinates;
-				const url = `http://api.weatherstack.com/current?access_key=a8b4bfbbfea85a597a3e9be443fb056d&query=${latitude},${longitude}&units=f`;
+				const url = `http://api.weatherstack.com/current?access_key=${weatherStackKey}&query=${latitude},${longitude}&units=f`;
 				fetchData(url);
 			} catch (error) {
 				console.log('No matching results!');
